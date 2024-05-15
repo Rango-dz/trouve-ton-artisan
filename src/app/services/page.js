@@ -16,7 +16,7 @@ const Services = () => {
   return (
     <>
       <main className='m-0 p-0'>
-          <h1 className='flex justify-center p-5'>Services</h1>
+          <h1 className='text-3xl flex justify-center m-5 p-5'>Services</h1>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 m-5'>
             
               {datas.map(item => (
