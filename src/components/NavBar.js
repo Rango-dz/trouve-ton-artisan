@@ -24,9 +24,8 @@ const NavBar = ({ onSearch }) => {
     };
 
     return (
-        <header>
-            <nav className='navbar-nav w-full bg-white shadow-md flex items-center justify-between'>
-                
+            <nav className='navbar-nav w-full bg-white shadow-md flex items-center justify-between px-4'>
+                {/* Logo */}
                 <div className='flex justify-start'>
                     <a href='/'>
                         <Image
