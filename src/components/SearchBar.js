@@ -10,11 +10,16 @@ const SearchBar = ({ onSearch, onInputChange }) => {
     return (
         <div>
             <input
+                className='border-2'
                 type="text"
                 onChange={onInputChange}
                 placeholder="Recherche..."
             />
-            <button onClick={handleSearch}>OK</button>
+            <button
+            className='btn-search m-1' 
+            onClick={handleSearch}>
+                OK
+            </button>
         </div>
     );
 };
