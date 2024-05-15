@@ -1,14 +1,12 @@
 'use client'
 
-import Footer from '@/components/Footer'
-import NavBar from '@/components/NavBar'
 import React from 'react'
 import datas from '/public/datas'
 import ContactForm from '@/components/ContactForm'
 
 const artisan = () => {
 
-    const dataId = localStorage.getItem('dataId');
+    const dataId = getItem('dataId');
   return (
     <>
         <div className="flex w-full">

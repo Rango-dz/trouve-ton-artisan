@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import SearchBar from './SearchBar';
 import SearchForm from './SearchForm';
 
 const NavBar = ({ onSearch }) => {
