@@ -11,7 +11,6 @@ const artisan = () => {
     const dataId = localStorage.getItem('dataId');
   return (
     <>
-    <NavBar/>
         <div className="flex w-full">
             {datas.map(item=>(
                 (dataId===item.id)&&
@@ -53,7 +52,6 @@ const artisan = () => {
                 </div> 
             )))}
         </div>
-        <Footer/>
     </>
   )
 }

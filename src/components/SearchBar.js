@@ -8,13 +8,14 @@ const SearchBar = ({ onSearch, onInputChange }) => {
     };
 
     return (
-        <div>
-            <input
+        <div className=''>
+            <input className=''
                 type="text"
                 onChange={onInputChange}
                 placeholder="Recherche..."
+                aria-label="Search input"
             />
-            <button onClick={handleSearch}>OK</button>
+            <button onClick={handleSearch} aria-label="Search button">Enter</button>
         </div>
     );
 };

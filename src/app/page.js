@@ -1,8 +1,4 @@
 'use client'
-
-
-import Footer from "@/components/Footer";
-import NavBar from "../components/NavBar";
 import Image from "next/image";
 import datas from "/public/datas";
 import { useState } from "react";
@@ -21,7 +17,6 @@ export default function Home() {
 
   return (
     <>
-      <NavBar />
       <main>
         <h1 className="p-5 flex justify-center">Comment trouver ton artisan</h1>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-5">
@@ -111,7 +106,6 @@ export default function Home() {
           )}
         </div>
       </main>
-      <Footer />
     </>
   );
 }

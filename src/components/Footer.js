@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <>
-        <footer>
+        <footer className='flex flex-col h-[30%]'>
         <div className='flex justify-start'>
             <a href='/'>
                 <Image
@@ -56,9 +56,9 @@ const Footer = () => {
                 <a href="tel:+33426734000">+33(0)426734000</a>
             </div>
         </div>
-        <div className='flex justify-center m-5'>
+        <div className='flex lg:justify-center m-5'>
             <nav>
-                <ul className='flex justify-between gap-2 md:gap-10'>
+                <ul className='flex flex-col lg:flex-row  justify-between gap-2 md:gap-10'>
                     <li><a href='/mentionsLegales'>Mentions Légales</a></li>
                     <li><a href='/donneesPrsonnelles'>Données Personnelles</a></li>
                     <li><a href='/accessiblite'>Accéssibilité</a></li>

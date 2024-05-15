@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import SearchBar from './SearchBar';
+import SearchForm from './SearchForm';
 
 const NavBar = ({ onSearch }) => {
     const [isClick, setIsClick] = useState(false);
@@ -13,7 +14,9 @@ const NavBar = ({ onSearch }) => {
     };
 
     const handleInputChange = (event) => {
-        setSearchTerm(event.target.value);
+        setTimeout(function () {
+            setSearchTerm(event.target.value);
+        }, 300)
     };
 
     const handleSearch = () => {
@@ -21,8 +24,7 @@ const NavBar = ({ onSearch }) => {
     };
 
     return (
-        <header>
-            <nav className='navbar-nav w-full bg-white shadow-md flex items-center justify-between'>
+            <nav className='navbar-nav w-full bg-white shadow-md flex items-center justify-between px-4'>
                 {/* Logo */}
                 <div className='flex justify-start'>
                     <a href='/'>
@@ -35,6 +37,12 @@ const NavBar = ({ onSearch }) => {
                         />
                     </a>
                 </div>
+                {/* Bouton de recherche et barre de recherche */}
+                <div className='hidden lg:flex m-2'>
+                        {/* <SearchBar onSearch={handleSearch} onInputChange={handleInputChange} /> */}
+                        <SearchForm />
+                </div>
+
                 {/* Liens de navigation */}
                 <div className='hidden lg:flex'>
                     <ul className='flex gap-5'>
@@ -44,28 +52,22 @@ const NavBar = ({ onSearch }) => {
                         <li className='hover:border-b-2'><a href='alimentation'>Alimentation</a></li>
                     </ul>
                 </div>
-                {/* Bouton de recherche et barre de recherche */}
-                <div className=''>
-                    <button className='m-5 lg:hidden' onClick={handleToggleClick}>
-                        {/* Icône du bouton de recherche */}
-                    </button>
-                    <div className='hidden lg:flex m-2'>
-                        <SearchBar onSearch={handleSearch} onInputChange={handleInputChange} />
-                    </div>
-                </div>
                 {/* Menu déroulant pour les petits écrans */}
+                <button className='m-2 p-2 rounded bg-white hover:bg-slate-50 block cursor-pointer border lg:hidden' onClick={handleToggleClick}>
+                        {/* Icône du bouton de recherche */}
+                        Menu
+                </button>
                 {isClick && (
-                    <div className='m-5'>
-                        <ul className='flex flex-col items-center'>
-                            <li className='m-2'><a href='/batiment'>Bâtiment</a></li>
-                            <li className='m-2'><a href='/services'>Services</a></li>
-                            <li className='m-2'><a href='fabrication'>Fabrication</a></li>
-                            <li className='m-2'><a href='alimentation'>Alimentation</a></li>
-                        </ul>
-                    </div>
+                <div className='m-2 translate-y-36 transition-all ease-in-out delay-500 z-50 absolute right-0 bg-white border shadow border-t-0 rounded-b-md p-4 mr-0 border-r-0'>
+                    <ul className='flex flex-col justify-end'>
+                        <li className='m-2'><a href='/batiment'>Bâtiment</a></li>
+                        <li className='m-2'><a href='/services'>Services</a></li>
+                        <li className='m-2'><a href='fabrication'>Fabrication</a></li>
+                        <li className='m-2'><a href='alimentation'>Alimentation</a></li>
+                    </ul>
+                </div>
                 )}
             </nav>
-        </header>
     );
 };
 

@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react';
-import Footer from '@/components/Footer';
-import NavBar from '@/components/NavBar';
 import React from 'react';
 import datas from '/public/datas';
 
@@ -17,7 +15,6 @@ const Services = () => {
  
   return (
     <>
-      <NavBar/>
       <main className='m-0 p-0'>
           <h1 className='flex justify-center p-5'>Services</h1>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 m-5'>
@@ -45,7 +42,6 @@ const Services = () => {
 
           </div>
         </main>
-      <Footer/>
     </>
   )
 }
