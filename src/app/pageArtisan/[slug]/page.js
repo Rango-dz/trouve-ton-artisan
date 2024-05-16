@@ -1,12 +1,22 @@
 'use client'
-
-import React from 'react'
-import datas from '/public/datas'
+import React, { useEffect } from 'react'
 import ContactForm from '@/components/ContactForm'
 
-const artisan = () => {
+export async function generateStaticParams() {
+    const response = await fetch('http://localhost:3000/datas.json').then((res) => res.json());
 
-    const dataId = getItem('dataId');
+    console.log(response);
+)
+   
+    return response.map((artisan) => ({
+      slug: artisan.name,
+    }))
+  }
+
+const artisan = ({params:{slug},dataId}) => {
+    const [datas, setDatas] = useState([])
+
+
   return (
     <>
         <div className="flex w-full">

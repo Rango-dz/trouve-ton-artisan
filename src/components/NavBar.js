@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import SearchForm from './SearchForm';
+import Link from 'next/link';
 
 const NavBar = ({ onSearch }) => {
     const [isClick, setIsClick] = useState(false);
@@ -26,7 +27,7 @@ const NavBar = ({ onSearch }) => {
             <nav className='navbar-nav w-full bg-white shadow-md flex items-center justify-between px-4'>
                 {/* Logo */}
                 <div className='flex justify-start'>
-                    <a href='/'>
+                    <Link href='/'>
                         <Image
                             src='/Logo.png'
                             alt="Logo"
@@ -34,7 +35,7 @@ const NavBar = ({ onSearch }) => {
                             height={180}
                             priority
                         />
-                    </a>
+                    </Link>
                 </div>
                 {/* Bouton de recherche et barre de recherche */}
                 <div className='hidden lg:flex m-2'>
@@ -45,10 +46,10 @@ const NavBar = ({ onSearch }) => {
                 {/* Liens de navigation */}
                 <div className='hidden lg:flex'>
                     <ul className='flex gap-5'>
-                        <li className='hover:border-b-2'><a href='/batiment'>Bâtiment</a></li>
-                        <li className='hover:border-b-2'><a href='/services'>Services</a></li>
-                        <li className='hover:border-b-2'><a href='fabrication'>Fabrication</a></li>
-                        <li className='hover:border-b-2'><a href='alimentation'>Alimentation</a></li>
+                        <li className='hover:border-b-2'><Link href='/batiment'>Bâtiment</Link></li>
+                        <li className='hover:border-b-2'><Link href='/services'>Services</Link></li>
+                        <li className='hover:border-b-2'><Link href='fabrication'>Fabrication</Link></li>
+                        <li className='hover:border-b-2'><Link href='alimentation'>Alimentation</Link></li>
                     </ul>
                 </div>
                 {/* Menu déroulant pour les petits écrans */}
@@ -59,10 +60,10 @@ const NavBar = ({ onSearch }) => {
                 {isClick && (
                 <div className='m-2 translate-y-36 transition-all ease-in-out delay-500 z-50 absolute right-0 bg-white border shadow border-t-0 rounded-b-md p-4 mr-0 border-r-0'>
                     <ul className='flex flex-col justify-end'>
-                        <li className='m-2'><a href='/batiment'>Bâtiment</a></li>
-                        <li className='m-2'><a href='/services'>Services</a></li>
-                        <li className='m-2'><a href='fabrication'>Fabrication</a></li>
-                        <li className='m-2'><a href='alimentation'>Alimentation</a></li>
+                        <li className='m-2'><Link href='/batiment'>Bâtiment</Link></li>
+                        <li className='m-2'><Link href='/services'>Services</Link></li>
+                        <li className='m-2'><Link href='fabrication'>Fabrication</Link></li>
+                        <li className='m-2'><Link href='alimentation'>Alimentation</Link></li>
                     </ul>
                 </div>
                 )}
