@@ -9,8 +9,9 @@ const SearchForm = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:3000/datas.json');
-      const data = await response.json();
+      const apiUrl = process.env.API_URL;
+      const url = `${apiUrl}/datas.json`;
+      const data = await fetch(url).then((res) => res.json());
       setData(data);
     };
 
