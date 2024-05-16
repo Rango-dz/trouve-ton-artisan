@@ -2,7 +2,9 @@ import Link from "next/link";
 
 const categories = async ({params}) => {
     const artisanID = params.slug;
-    const datas = await fetch('http://localhost:3000/datas.json').then((res) => res.json());
+    const apiUrl = process.env.API_URL;
+    const url = `${apiUrl}/datas.json`;
+    const datas = await fetch(url).then((res) => res.json());
     
     const artisanProfile = datas.map(item => item.category.toLowerCase() === artisanID.toLowerCase() ? item : null);
     
