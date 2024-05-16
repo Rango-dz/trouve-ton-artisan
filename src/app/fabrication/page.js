@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import React from 'react';
 import datas from '/public/datas';
+import { Link } from 'lucide-react';
 
 const Fabrication = () => {
   const category = "Fabrication";
@@ -28,14 +29,14 @@ const Fabrication = () => {
                           onClick={() => handleClick(item.id)} 
                           className={`border-2 p-5 ${item.id === dataId ? 'bg-gray-200' : ''}`} 
                       >
-                        <a href='pageArtisan'>
+                        <Link href='pageArtisan'>
                           <ul className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             <li><h5>{item.name}</h5></li>
                             <li>{item.category}</li>
                             <li>{item.location}</li>
                             <li>{item.note}</li>
                           </ul>
-                        </a>
+                        </Link>
                 </button>
               )))}
 
