@@ -6,12 +6,6 @@ const artisan = async ({params}) => {
 
     const artisanProfile = datas.map(item => item.id === artisanID ? item : null);
 
-
-
-
-    console.log('item',artisanProfile[0].name)
-
-
   return (
     <>
         <div className="flex w-full">
