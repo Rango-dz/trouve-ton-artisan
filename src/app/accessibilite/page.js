@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{ Suspense }  from 'react'
 
 const Accessibilite = () => {
   return (
+    <Suspense>
     <div>Accessibilité</div>
+    </Suspense>
   )
 }
 

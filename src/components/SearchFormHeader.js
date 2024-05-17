@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 
 const SearchForm = () => {
   const [name, setName] = useState('');
@@ -64,6 +65,7 @@ const SearchForm = () => {
   };
 
   return (
+    <Suspense>
     <div>
       <form onSubmit={handleSearch}>
         <label htmlFor="name">Name:</label>
@@ -99,6 +101,7 @@ const SearchForm = () => {
         <button type="submit">Search</button>
       </form>
     </div>
+    </Suspense>
   );
 };
 

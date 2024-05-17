@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{ Suspense }  from 'react'
 
 const mentionsLegales = () => {
   return (
+    <Suspense>
+
     <div>Mentions Légales</div>
+    </Suspense>
   )
 }
 

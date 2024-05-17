@@ -65,6 +65,7 @@ const SearchForm = () => {
   };
 
   return (
+    <Suspense>
     <div>
       <h2>Search for Artisans</h2>
 
@@ -102,7 +103,7 @@ const SearchForm = () => {
         <button type="submit">Search</button>
       </form>
 
-      <Suspense>
+      
       {pathname.startsWith('/search') && filteredData.length > 0 && (
         <div>
           <h2>Results</h2>
@@ -118,8 +119,8 @@ const SearchForm = () => {
           </ul>
         </div>
       )}
-      </Suspense>
     </div>
+      </Suspense>
   );
 };
 

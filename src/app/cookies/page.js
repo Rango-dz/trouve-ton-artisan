@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{ Suspense }  from 'react'
 
 const Cookies = () => {
   return (
+    <Suspense>
+
     <div>Cookies</div>
+    </Suspense>
   )
 }
 
