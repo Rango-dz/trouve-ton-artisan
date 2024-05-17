@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 
 const SearchForm = () => {
   const [name, setName] = useState('');
@@ -101,6 +102,7 @@ const SearchForm = () => {
         <button type="submit">Search</button>
       </form>
 
+      <Suspense>
       {pathname.startsWith('/search') && filteredData.length > 0 && (
         <div>
           <h2>Results</h2>
@@ -116,6 +118,7 @@ const SearchForm = () => {
           </ul>
         </div>
       )}
+      </Suspense>
     </div>
   );
 };
