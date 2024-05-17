@@ -81,7 +81,6 @@ export default function Home() {
                 
                     <button
                         key={item.id}
-                        onClick={() => handleClick(item.id)} 
                         className="border-2 p-5 bg-gray-200"
                     >
                       <Link href={`/artisan/${item.id}`}>

@@ -1,10 +1,10 @@
+'use client'
 import React,{ Suspense }  from 'react'
 
 const mentionsLegales = () => {
   return (
     <Suspense>
-
-    <div>Mentions Légales</div>
+    <div>Mentions Legales</div>
     </Suspense>
   )
 }
