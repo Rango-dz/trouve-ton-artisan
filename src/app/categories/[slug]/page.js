@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const categories = async ({params}) => {
     const artisanID = params.slug;
-    const apiUrl = process.env.API_URL;
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     const url = `${apiUrl}/datas.json`;
     const datas = await fetch(url).then((res) => res.json());
     

@@ -65,8 +65,6 @@ const SearchForm = () => {
 
   return (
     <div>
-      <h2>Search for Artisans</h2>
-
       <form onSubmit={handleSearch}>
         <label htmlFor="name">Name:</label>
         <input
@@ -100,22 +98,6 @@ const SearchForm = () => {
 
         <button type="submit">Search</button>
       </form>
-
-      {pathname.startsWith('/search') && filteredData.length > 0 && (
-        <div>
-          <h2>Results</h2>
-          <ul>
-            {filteredData.map(artisan => (
-              <li key={artisan.id}>
-                <h3>{artisan.name}</h3>
-                <p>Specialty: {artisan.specialty}</p>
-                <p>Location: {artisan.location}</p>
-                {/* Add other details as needed */}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 };

@@ -1,25 +1,16 @@
 'use client'
 import Image from "next/image";
 import datas from "/public/datas";
-import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
  
-
-
-  const [dataId, setDataId] = useState(null); 
-
-  const handleClick = (id) => {
-    setDataId(id);
-    localStorage.setItem('dataId', id)
-  };
 
   
   const top = true;
 
   return (
     <>
-      <main>
         <h1 className="p-5 m-5 flex lg-justify-start text-3xl">Comment trouver ton artisan</h1>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mx-5">
           <div className="md:col-span-1 mb-20">
@@ -91,22 +82,21 @@ export default function Home() {
                     <button
                         key={item.id}
                         onClick={() => handleClick(item.id)} 
-                        className={`border-2 p-5 ${item.id === dataId ? 'bg-gray-200' : ''}`} 
+                        className="border-2 p-5 bg-gray-200"
                     >
-                      <a href='pageArtisan'>
+                      <Link href={`/artisan/${item.id}`}>
                         <ul className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                           <li><h5>{item.name}</h5></li>
                           <li>{item.category}</li>
                           <li>{item.location}</li>
                           <li>{item.note}</li>
                         </ul>
-                      </a>
+                      </Link>
               </button>
               
             )))}
 
         </div>
-      </main>
     </>
   );
 }

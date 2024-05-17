@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import SearchForm from './SearchForm';
+import SearchForm from './SearchFormHeader';
 import Link from 'next/link';
 
 const NavBar = ({ onSearch }) => {
@@ -39,7 +39,7 @@ const NavBar = ({ onSearch }) => {
                 {/* Liens de navigation */}
                 <div className='hidden lg:flex'>
                     <ul className='flex gap-5'>
-                        <li className='hover:border-b-2'><Link href='/categories/batiment'>Bâtiment</Link></li>
+                        <li className='hover:border-b-2'><Link href='/categories/batiment'>Batiment</Link></li>
                         <li className='hover:border-b-2'><Link href='/categories/services'>Services</Link></li>
                         <li className='hover:border-b-2'><Link href='/categories/fabrication'>Fabrication</Link></li>
                         <li className='hover:border-b-2'><Link href='/categories/alimentation'>Alimentation</Link></li>
@@ -53,7 +53,7 @@ const NavBar = ({ onSearch }) => {
                 {isClick && (
                 <div className='m-2 translate-y-36 transition-all ease-in-out delay-500 z-50 absolute right-0 bg-white border shadow border-t-0 rounded-b-md p-4 mr-0 border-r-0'>
                     <ul className='flex flex-col justify-end'>
-                        <li className='m-2'><Link href='/categories/batiment'>Bâtiment</Link></li>
+                        <li className='m-2'><Link href='/categories/batiment'>Batiment</Link></li>
                         <li className='m-2'><Link href='/categories/services'>Services</Link></li>
                         <li className='m-2'><Link href='/categories/fabrication'>Fabrication</Link></li>
                         <li className='m-2'><Link href='/categories/alimentation'>Alimentation</Link></li>

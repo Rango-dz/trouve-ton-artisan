@@ -21,10 +21,8 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className={inter.className}>
       <Header />
-      <main className="min-h-screen flex flex-col">
-
+      <main className="min-h-screen flex flex-col py-5">
        {children}
-
       </main>
       <Footer />
       </body>
